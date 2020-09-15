@@ -2,7 +2,7 @@
 name = "NONVME_brain_games"
 version = "0.1.0"
 description = ""
-authors = ["NONVME <vgtrk700@gmail.com>"]
+authors = ["NONVME <efimmm.ev@gmail.com>"]
 packages = [
   { include = "brain_games" },
 ]
