@@ -1,7 +1,9 @@
+"""Command line interface."""
+
 import prompt
 
 
 def welcome_user():
-    ''' prints a prompt for the entered value '''
+    """Print a prompt for the enter value."""
     name = prompt.string('May I have your name? ')
-    print(f"Hello, {name}!")
+    print(f'Hello, {name}!')
