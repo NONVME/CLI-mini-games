@@ -4,7 +4,10 @@ install:
 lint:
 	poetry run flake8 brain_games
 
-build: check
+build:
 	@poetry build
 
-.PHONY: install lint build
+publish:
+	@poetry publish -r testpypi
+
+.PHONY: install lint build publish
