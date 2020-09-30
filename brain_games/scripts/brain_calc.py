@@ -1,4 +1,4 @@
-"""Brain_even."""
+"""Brain_calc."""
 
 from brain_games import engine
 
@@ -10,7 +10,7 @@ def main():
         'Answer \"yes\" if number even otherwise answer \"no\".\n',
     )
     engine.welcome_user()
-    engine.play('brain_even')()
+    engine.play('brain_calc')()
 
 
 if __name__ == '__main__':

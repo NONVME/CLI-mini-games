@@ -1,8 +1,9 @@
-"""The module contains the main logic of the game."""
-
-from random import randint
+"""The module contains the main logic for managing games."""
 
 from prompt import string
+
+from brain_games.games import brain_calc_game as calc_g
+from brain_games.games import brain_even_game as even_g
 
 
 def welcome_user():
@@ -12,26 +13,25 @@ def welcome_user():
     print(f"Hello, {name}!\n")
 
 
-def play():
-    """Print the main logic of the game."""
-    counter = 0
-    while counter < 3:
-        counter += 1
-        r_number = randint(0, 100)
-        print(f"Question: {r_number}")
-        answer = string("Your answer: ")
-        even = r_number % 2 == 0
-        if answer == "yes" and even:
-            print("Correct!")
-        elif answer == "no" and not even:
-            print("Correct!")
-        else:
-            correct_answer = "yes" if answer == "no" else "no"
-            print(
-                f"'{answer}' is wrong answer ;(.",
-                f"Correct answer was '{correct_answer}'.\n",
-                f"Let's try again, {name}!",
-            )
-            break
-    else:
-        print(f"Congratulations, {name}!")
+def play(name_of_the_game):
+    """Return the logic of the requested game.
+
+    Args:
+        name_of_the_game: the name of the game.
+
+    Returns:
+        func
+
+    """
+
+    def brain_even():
+        even_g.play(name)
+
+    def brain_calc():
+        calc_g.play(name)
+
+    if name_of_the_game == 'brain_calc':
+        return brain_calc
+
+    elif name_of_the_game == 'brain_even':
+        return brain_even
