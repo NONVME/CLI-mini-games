@@ -6,7 +6,7 @@ install:
 lint:
 	@poetry run flake8 brain_games
 
-build:
+build: lint
 	@poetry build
 
 publish: build

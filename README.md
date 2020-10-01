@@ -26,10 +26,6 @@ pip install --extra-index-url https://test.pypi.org/simple/ nonvme-brain-games
 
 To start the game, just run the required module from the terminal
 
-```bash
-brain-even
-```
-
 [![asciicast](https://asciinema.org/a/Enf1UGUjUpcaCvwgKED6q0XQ9.svg)](https://asciinema.org/a/Enf1UGUjUpcaCvwgKED6q0XQ9?speed=3)
 
 ## Contributing
