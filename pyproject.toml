@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "NONVME_brain_games"
-version = "0.4.0"
+version = "0.4.1"
 description = ""
 authors = ["NONVME <efimmm.ev@gmail.com>"]
 packages = [
@@ -21,4 +21,4 @@ build-backend = "poetry.masonry.api"
 [tool.poetry.scripts]
 brain-games = "brain_games.scripts.brain_games:main"
 brain-even = "brain_games.scripts.brain_even:main"
-brain-calc = "brain_calc.scripts.brain_calc:main"
+brain-calc = "brain_games.scripts.brain_calc:main"
