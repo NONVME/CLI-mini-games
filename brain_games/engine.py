@@ -4,6 +4,7 @@ from prompt import string
 
 from brain_games.games import brain_calc_game as calc_g
 from brain_games.games import brain_even_game as even_g
+from brain_games.games import brain_gcd_game as gcd_g
 
 
 def welcome_user():
@@ -30,8 +31,14 @@ def play(name_of_the_game):
     def brain_calc():
         calc_g.play(name)
 
+    def brain_gcd():
+        gcd_g.play(name)
+
     if name_of_the_game == 'brain_calc':
         return brain_calc
 
-    elif name_of_the_game == 'brain_even':
+    if name_of_the_game == 'brain_even':
         return brain_even
+
+    if name_of_the_game == 'brain_gcd':
+        return brain_gcd
