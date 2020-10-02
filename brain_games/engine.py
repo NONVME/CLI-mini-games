@@ -5,6 +5,8 @@ from prompt import string
 from brain_games.games import brain_calc_game as calc_g
 from brain_games.games import brain_even_game as even_g
 from brain_games.games import brain_gcd_game as gcd_g
+from brain_games.games import brain_progression_game as progression_g
+from brain_games.games import brain_prime_game as prime_g
 
 
 def welcome_user():
@@ -34,6 +36,12 @@ def play(name_of_the_game):
     def brain_gcd():
         gcd_g.play(name)
 
+    def brain_progression():
+        progression_g.play(name)
+
+    def brain_prime():
+        prime_g.play(name)
+
     if name_of_the_game == 'brain_calc':
         return brain_calc
 
@@ -42,3 +50,9 @@ def play(name_of_the_game):
 
     if name_of_the_game == 'brain_gcd':
         return brain_gcd
+
+    if name_of_the_game == 'brain_progression':
+        return brain_progression
+
+    if name_of_the_game == 'brain_prime':
+        return brain_prime
