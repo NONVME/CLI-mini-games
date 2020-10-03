@@ -8,10 +8,8 @@ from prompt import integer
 
 def play(name):
     """Print the main logic of the game.
-
     Args:
         name: the username in prompt.
-
     """
     counter = 0
     while counter < 3:
