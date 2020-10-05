@@ -4,8 +4,7 @@
 <a href="https://codeclimate.com/github/NONVME/python-project-lvl1/maintainability"><img src="https://api.codeclimate.com/v1/badges/35d83c18e06a3041c4f2/maintainability" /></a>
 ![Python CI](https://github.com/NONVME/python-project-lvl1/workflows/Python%20CI/badge.svg?branch=master)
 
-This is a first level project. created as part of the [Hexlet] training course to prepare a Python Web developer.
-(https://ru.hexlet.io/)
+This is a first level project. created as part of the [Hexlet](https://ru.hexlet.io/) training course to prepare a Python Web developer.
 
 The package contains simple mathematics quiz games:
 
