@@ -1,16 +1,13 @@
-"""Brain_even."""
+"""Brain even."""
 
-from brain_games import engine
+from brain_games.engine import play, welcome_user
+from brain_games.games import even
 
 
 def main():
     """Call the main logic of the game."""
-    print(
-        'Welcome to the Brain Games!\n',
-        'Answer \"yes\" if number even otherwise answer \"no\".\n',
-    )
-    engine.welcome_user()
-    engine.play('brain_even')()
+    welcome_user(even)
+    play(even)
 
 
 if __name__ == '__main__':

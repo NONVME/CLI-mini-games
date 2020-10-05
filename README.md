@@ -11,6 +11,9 @@ The package contains simple mathematics quiz games:
 
 - Even check `brain-even`
 - Calculator `brain-calc`
+- Greatest common divider `brain-gcd`
+- Prime number `brain-prime`
+- Arithmetic progression `brain-progression`
 
 ## Installation
 

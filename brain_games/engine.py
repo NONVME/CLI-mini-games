@@ -2,57 +2,42 @@
 
 from prompt import string
 
-from brain_games.games import brain_calc_game as calc_g
-from brain_games.games import brain_even_game as even_g
-from brain_games.games import brain_gcd_game as gcd_g
-from brain_games.games import brain_progression_game as progression_g
-from brain_games.games import brain_prime_game as prime_g
+QUANTITY_STEPS = 3
 
 
-def welcome_user():
-    """Print a prompt for the enter value."""
-    global name
-    name = string("May I have your name? ")
-    print(f"Hello, {name}!\n")
+def welcome_user(game):
+    """Print a prompt for the enter value.
+
+    Args:
+        game: the name of the game.
+
+    """
+    global user_name
+    print('Welcome to the Brain Games!\n{0}\n'.format(game.ISSUE_DESCRIPTION))
+    user_name = string('May I have your name? ')
+    print('Hello, {0}!\n'.format(user_name))
 
 
-def play(name_of_the_game):
+def play(game):
     """Return the logic of the requested game.
 
     Args:
-        name_of_the_game: the name of the game.
+        game: the name of the game.
 
     Returns:
-        func
+        None
 
     """
-
-    def brain_even():
-        even_g.play(name)
-
-    def brain_calc():
-        calc_g.play(name)
-
-    def brain_gcd():
-        gcd_g.play(name)
-
-    def brain_progression():
-        progression_g.play(name)
-
-    def brain_prime():
-        prime_g.play(name)
-
-    if name_of_the_game == 'brain_calc':
-        return brain_calc
-
-    if name_of_the_game == 'brain_even':
-        return brain_even
-
-    if name_of_the_game == 'brain_gcd':
-        return brain_gcd
-
-    if name_of_the_game == 'brain_progression':
-        return brain_progression
-
-    if name_of_the_game == 'brain_prime':
-        return brain_prime
+    for step in range(QUANTITY_STEPS):
+        game_question, game_answer = game.play()
+        user_answer = string(
+            'Question: {0}\nYour answer: '.format(game_question)
+        )
+        if user_answer != str(game_answer):
+            print("'{0}' is wrong answer ;(. Correct answer was '{1}'.".format(
+                user_answer, game_answer)
+            )
+            print("Let's try again, {0}!".format(user_name))
+            return
+        print('Correct!')
+    print('Congratulations, {0}'.format(user_name))
