@@ -23,5 +23,5 @@ def play():
     index = randint(0, 9)
     game_answer = progression[index]
     progression[index] = '..'
-    game_question = 'Question: {0}'.format(' '.join(map(str, progression)))
+    game_question = '{0}'.format(' '.join(map(str, progression)))
     return game_question, game_answer
