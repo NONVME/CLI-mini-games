@@ -28,7 +28,13 @@ pip install --extra-index-url https://test.pypi.org/simple/ nonvme-brain-games
 
 To start the game, just run the required module from the terminal
 
-[![asciicast](https://asciinema.org/a/Enf1UGUjUpcaCvwgKED6q0XQ9.svg)](https://asciinema.org/a/Enf1UGUjUpcaCvwgKED6q0XQ9?speed=3)
+### Run with correct answers
+
+[[![asciicast](https://asciinema.org/a/7vBbN5IQRxYbludCLCYPuH8jU.svg)](https://asciinema.org/a/7vBbN5IQRxYbludCLCYPuH8jU?speed=3)
+
+###Run with wrong answers
+
+[![asciicast](https://asciinema.org/a/2hyj7bF18xU7p0p3cLZnaG3KZ.svg)](https://asciinema.org/a/2hyj7bF18xU7p0p3cLZnaG3KZ?speed=3)
 
 ## Contributing
 

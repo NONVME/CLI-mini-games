@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "NONVME_brain_games"
-version = "0.6.0"
+version = "0.6.1"
 description = ""
 authors = ["NONVME <efimmm.ev@gmail.com>"]
 packages = [
