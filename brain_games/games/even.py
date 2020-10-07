@@ -2,10 +2,10 @@
 
 from random import randint
 
-ISSUE_DESCRIPTION = 'Answer "yes" if number even otherwise answer "no".'
+DESCRIPTION = 'Answer "yes" if number even otherwise answer "no".'
 
 
-def play():
+def generate_round():
     """Return the main logic of the game.
 
     Returns:

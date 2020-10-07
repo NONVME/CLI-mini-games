@@ -2,12 +2,13 @@
 
 from random import randint
 
-ISSUE_DESCRIPTION = (
+DESCRIPTION = (
     'Answer "yes" if given number is prime. Otherwise answer "no".'
 )
+MIN_PRIME = 2
 
 
-def play():
+def generate_round():
     """Return the main logic of the game.
 
     Returns:
@@ -15,7 +16,7 @@ def play():
         game_answer: result of operation
 
     """
-    number = randint(0, 100)
+    number = randint(MIN_PRIME, 100)
     game_question = '{0} is prime?'.format(number)
     if is_prime(number):
         return game_question, 'yes'
@@ -24,7 +25,9 @@ def play():
 
 def is_prime(n):
     """Return True if number is prime."""
-    d = 2
-    while d * d <= n and n % d != 0:
+    d = MIN_PRIME
+    while d <= n ** 0.5:
+        if n % d == 0:
+            return False
         d += 1
-    return d * d > n
+    return True

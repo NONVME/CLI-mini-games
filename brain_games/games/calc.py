@@ -3,10 +3,10 @@
 from operator import add, mul, sub
 from random import choice, randint
 
-ISSUE_DESCRIPTION = 'What is the result of the expression?'
+DESCRIPTION = 'What is the result of the expression?'
 
 
-def play():
+def generate_round():
     """Return the main logic of the game.
 
     Returns:
@@ -21,6 +21,6 @@ def play():
         '*': mul,
     }
     action = choice(list(operation))
-    game_answer = operation[action](number1, number2)
+    game_answer = str(operation[action](number1, number2))
     game_question = '{0} {1} {2}'.format(number1, action, number2)
     return game_question, game_answer

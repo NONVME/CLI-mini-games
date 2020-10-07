@@ -1,12 +1,16 @@
 """The module contains the basic rules and logic of the game."""
 
-from itertools import islice
 from random import randint
 
-ISSUE_DESCRIPTION = 'What number is missing in the progression?'
+DESCRIPTION = 'What number is missing in the progression?'
+STEP_MIN = 1
+STEP_MAX = 10
+START_MIN = 0
+START_MAX = 100
+LENGTH = 10
 
 
-def play():
+def generate_round():
     """Return the main logic of the game.
 
     Returns:
@@ -14,14 +18,11 @@ def play():
         game_answer: result of operation
 
     """
-    step = randint(1, 10)
-    start = randint(0, 100)
-    progression = list(islice((
-        x + start
-        for x in range(100)
-        if x % step == 0), 10))
+    step = randint(STEP_MIN, STEP_MAX)
+    start = randint(START_MIN, START_MAX)
+    progression = [(start + (_ * step)) for _ in range(LENGTH)]
     index = randint(0, 9)
-    game_answer = progression[index]
+    game_answer = str(progression[index])
     progression[index] = '..'
-    game_question = '{0}'.format(' '.join(map(str, progression)))
+    game_question = ' '.join(map(str, progression))
     return game_question, game_answer
