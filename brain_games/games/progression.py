@@ -11,13 +11,7 @@ LENGTH = 10
 
 
 def generate_round():
-    """Return the main logic of the game.
-
-    Returns:
-        game_question: equation description;
-        game_answer: result of operation
-
-    """
+    """Return the main logic of the game."""
     step = randint(STEP_MIN, STEP_MAX)
     start = randint(START_MIN, START_MAX)
     progression = [(start + (_ * step)) for _ in range(LENGTH)]

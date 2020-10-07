@@ -6,13 +6,7 @@ DESCRIPTION = 'Answer "yes" if number even otherwise answer "no".'
 
 
 def generate_round():
-    """Return the main logic of the game.
-
-    Returns:
-        game_question: equation description;
-        game_answer: result of operation
-
-    """
+    """Return the main logic of the game."""
     number = randint(0, 100)
     is_even = number % 2 == 0
     if is_even:

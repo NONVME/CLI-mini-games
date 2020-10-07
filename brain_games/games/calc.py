@@ -7,13 +7,7 @@ DESCRIPTION = 'What is the result of the expression?'
 
 
 def generate_round():
-    """Return the main logic of the game.
-
-    Returns:
-        game_question: equation description;
-        game_answer: result of operation
-
-    """
+    """Return the main logic of the game."""
     number1, number2 = [randint(0, 100) for _ in range(2)]
     operation = {
         '+': add,

@@ -6,13 +6,7 @@ DESCRIPTION = 'Find the greatest common divisor of given numbers.'
 
 
 def generate_round():
-    """Return the main logic of the game.
-
-    Returns:
-        game_question: equation description;
-        game_answer: result of operation
-
-    """
+    """Return the main logic of the game."""
     number1, number2 = [randint(0, 100) for _ in range(2)]
     game_question = '{0} {1}'.format(number1, number2)
     game_answer = str(gcd(number1, number2))
