@@ -14,8 +14,8 @@ def generate_round():
     """Return the main logic of the game."""
     step = randint(STEP_MIN, STEP_MAX)
     start = randint(START_MIN, START_MAX)
-    progression = [(start + (_ * step)) for _ in range(LENGTH)]
-    index = randint(0, 9)
+    progression = [(start + (i * step)) for i in range(LENGTH)]
+    index = randint(0, LENGTH - 1)
     game_answer = str(progression[index])
     progression[index] = '..'
     game_question = ' '.join(map(str, progression))
